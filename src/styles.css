@@ -1,0 +1,23 @@
+.user-name{
+    text-align: center;
+}
+
+.hobby-section, .language-section{
+    background-color: green;
+}
+
+.language-title, .hobby-title{
+    color: white;
+}
+
+.hobby-list, .language-list{
+    color: white;
+}
+
+.hobby-list1, .language-list1, .band-list1{
+    color: cyan
+}
+
+.hobby-list4, .band-list4, .language-list4{
+    text-decoration: line-through;
+}

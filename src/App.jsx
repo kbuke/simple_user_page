@@ -1,33 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./styles.css"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const hobbies = ["Football", "Coding", "Japanese", "Ballet"]
+  const faveBands = ["Cranberries", "Rolling Stones", "Pink Floyd", "One Direction"]
+  const faveLanguages = ["Python", "React.js", "CSS", "Ruby"]
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1 className="user-name">
+        Kaan Buke
+      </h1>
+
+      <div className="hobby-section">
+        <h2 className="hobby-title">Hobbies</h2>
+        <ul>
+          {hobbies.map((hobby, index) => {
+            return(
+              <li className={`hobby-list hobby-list${index + 1}`} key={index}>
+                {hobby}
+              </li>
+            )
+          })}
+        </ul>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div className="band-section">
+        <h2>Favourite Bands</h2>
+        <ol>
+          {faveBands.map((band, index) => {
+            return(
+              <li key={index} className={`band-list band-list${index+1}`}>
+                {band}
+              </li>
+            )
+          })}
+        </ol>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <div className="language-section">
+          <h2 className="language-title">Favourite Languages</h2>
+          <ul>
+            {faveLanguages.map((language, index) => {
+              return(
+                <li key={index} className={`language-list language-list${index+1}`}>
+                  {language}
+                </li>
+              )
+            })}
+          </ul>
+      </div>
     </>
   )
 }
